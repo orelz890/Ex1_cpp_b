@@ -28,18 +28,18 @@ namespace ariel{
             if (i%2 != 0){sign = sign2;}
             // Adding the edges 2 rows & 2 col
             for (size_t k = i; k < length-i; k++){
-                matrix[i][k] = sign;
-                matrix[height - i - 1][k] = sign;
+                matrix.at(i).at(k) = sign;
+                matrix.at(height - i - 1).at(k) = sign;
             }
             for (size_t k = i; k < height-i; k++){
-                matrix[k][i] = sign;
-                matrix[k][length - i - 1] = sign;
+                matrix.at(k).at(i) = sign;
+                matrix.at(k).at(length - i - 1) = sign;
             }
         }
         // Construct a string from the data
         for (size_t i = 0; i < height; i++){
             for (size_t j = 0; j < length; j++){
-                ans += matrix[i][j];
+                ans += matrix.at(i).at(j);
             }
             if(i != height -1){ans+= '\n';}
         }
