@@ -6,7 +6,7 @@
 
 // In order to run enter the following:
 // g++ -o ans11.o my_main_test.cpp mat.cpp mat.hpp
-// .\ans11
+// ./ans11
 namespace ariel{
     void print_ans(){
         int n1, n2;
